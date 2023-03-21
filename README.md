@@ -52,6 +52,6 @@
 
 ![swagger documentation](https://user-images.githubusercontent.com/70807333/226558560-4a8fe1b5-d192-45b0-a878-f515f15fb0cf.png)
 
-Dockerfile to run API
+<h3>Dockerfile to run API</h3>
 
 ![run with Docker](https://user-images.githubusercontent.com/70807333/226559506-5133ef62-93b5-4104-ab49-32a053f28959.png)
