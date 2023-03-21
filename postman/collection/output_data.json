@@ -1,0 +1,403 @@
+{
+	"info": {
+		"_postman_id": "c2d9f523-2e7d-4b78-ba17-b7ce766fddc4",
+		"name": "Employee DRF",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25481516"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"admin\",\r\n    \"password\":\"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/login/",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create employee",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc5MzkwMjI4LCJpYXQiOjE2NzkzODk5MjgsImp0aSI6IjU0NzZlZDhhZjU5NjQzMWNiNWIyNTVmNjYzYmFjNmY5IiwidXNlcl9pZCI6MX0.mlGHotcnQ3vCwJH_vHxtknD2yCynaAOUlgS3FMhfj6g",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Murali\",\r\n    \"age\":\"25\",\r\n    \"gender\":\"M\",\r\n    \"department\":\"IT\",\r\n    \"salary\":\"20000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/employee/",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"employee",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "age validation",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc5MzkwMzQ3LCJpYXQiOjE2NzkzOTAwNDcsImp0aSI6IjBhMjRlNTFjYmMzYTQwODU4NGY3NzM3MTgwM2QzNTg5IiwidXNlcl9pZCI6MX0.ZykvdHJDiHZE6k9P7KGUwxk2qLi5CcqjWSaBVErh0EM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Murali\",\r\n    \"age\":\"62\",\r\n    \"gender\":\"M\",\r\n    \"department\":\"IT\",\r\n    \"salary\":\"20000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/employee/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"employee",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "gender validation",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc5MzkwMzQ3LCJpYXQiOjE2NzkzOTAwNDcsImp0aSI6IjBhMjRlNTFjYmMzYTQwODU4NGY3NzM3MTgwM2QzNTg5IiwidXNlcl9pZCI6MX0.ZykvdHJDiHZE6k9P7KGUwxk2qLi5CcqjWSaBVErh0EM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Murali\",\r\n    \"age\":\"23\",\r\n    \"gender\":\"G\",\r\n    \"department\":\"IT\",\r\n    \"salary\":\"20000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/employee/",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"employee",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete by id validation",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc5MzkwMzQ3LCJpYXQiOjE2NzkzOTAwNDcsImp0aSI6IjBhMjRlNTFjYmMzYTQwODU4NGY3NzM3MTgwM2QzNTg5IiwidXNlcl9pZCI6MX0.ZykvdHJDiHZE6k9P7KGUwxk2qLi5CcqjWSaBVErh0EM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/employee/1/",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"employee",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete employee",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc5MzkwMzQ3LCJpYXQiOjE2NzkzOTAwNDcsImp0aSI6IjBhMjRlNTFjYmMzYTQwODU4NGY3NzM3MTgwM2QzNTg5IiwidXNlcl9pZCI6MX0.ZykvdHJDiHZE6k9P7KGUwxk2qLi5CcqjWSaBVErh0EM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "127.0.0.1:8000/api/employee/2/",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"employee",
+						"2",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get employee",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc5MzkwNjczLCJpYXQiOjE2NzkzOTAzNzMsImp0aSI6IjMwZWFjMDQ4ZTc5OTQ0YTliMWE0MGEyYzk4Mjg2MTRkIiwidXNlcl9pZCI6MX0.SMtt3ypzNE-ngnTMrJ_hHRwEeFwFxuzdn1-limWQj-U",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "127.0.0.1:8000/api/employee/3/",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"employee",
+						"3",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get employee id validation",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc5MzkwNjczLCJpYXQiOjE2NzkzOTAzNzMsImp0aSI6IjMwZWFjMDQ4ZTc5OTQ0YTliMWE0MGEyYzk4Mjg2MTRkIiwidXNlcl9pZCI6MX0.SMtt3ypzNE-ngnTMrJ_hHRwEeFwFxuzdn1-limWQj-U",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "127.0.0.1:8000/api/employee/1/",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"employee",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all employee",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc5MzkwOTkxLCJpYXQiOjE2NzkzOTA2OTEsImp0aSI6ImRiYWMzOGY4OTkwMzRhYWQ5Y2IwYThmY2EwYzU5YzI3IiwidXNlcl9pZCI6MX0.KNWuurltYLdThBzUA9wfajKKrfPoPoCayGcs4l0aFWY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/all_employee/",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"all_employee",
+						""
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update by id validation",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc5MzkxMDgwLCJpYXQiOjE2NzkzOTA3ODAsImp0aSI6IjNiYzk2ZTRlOGQyZTQ4NTg5NmQ1NWRjN2JhODIxODlkIiwidXNlcl9pZCI6MX0.YBTcck0xUKHOumAtjr83t_gC-R8ysnO-4ubj3PVQJZM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "127.0.0.1:8000/api/employee/1/",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"employee",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update employee",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc5MzkxMDgwLCJpYXQiOjE2NzkzOTA3ODAsImp0aSI6IjNiYzk2ZTRlOGQyZTQ4NTg5NmQ1NWRjN2JhODIxODlkIiwidXNlcl9pZCI6MX0.YBTcck0xUKHOumAtjr83t_gC-R8ysnO-4ubj3PVQJZM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Murali\",\r\n    \"age\":25,\r\n    \"salary\":\"30000\",\r\n    \"department\":\"IT\",\r\n    \"gender\":\"M\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/employee/3/",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"employee",
+						"3",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
